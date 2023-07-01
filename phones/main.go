@@ -20,9 +20,6 @@ func processLine(key string, t map[string]string, fileList *[]string, currentFil
 }
 
 func processFile(fileName string, tm map[string]string, fileList *[]string, currentFileIndex int) {
-	if !strings.HasPrefix(fileName, "example_") {
-		return
-	}
 	log.Println("started ", fileName)
 	var i uint64
 	fd, err := os.Open(fileName)
